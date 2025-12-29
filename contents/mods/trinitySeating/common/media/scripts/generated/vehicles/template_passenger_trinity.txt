@@ -1,0 +1,57 @@
+module Base
+{
+    template vehicle PassengerSeat3_Trinity
+    {
+        template! = PassengerCommon,
+        passenger FrontLeft
+        {
+            door = DoorFrontLeft,
+            area = SeatFrontLeft,
+            switchSeat FrontMiddle
+            {
+                anim = Climb_WindowB,
+                rate = 0.23,
+                sound = VehicleChangeSeat,
+            }
+            switchSeat FrontRight
+            {
+                anim = Climb_WindowB,
+                rate = 0.46,
+                sound = VehicleChangeSeat,
+            }
+        }
+        passenger FrontMiddle
+        {
+            area = SeatFrontMiddle,
+            switchSeat FrontLeft
+            {
+                anim = Climb_WindowB,
+                rate = 0.23,
+                sound = VehicleChangeSeat,
+            }
+            switchSeat FrontRight
+            {
+                anim = Climb_WindowB,
+                rate = 0.23,
+                sound = VehicleChangeSeat,
+            }
+        }
+        passenger FrontRight
+        {
+            door = DoorFrontRight,
+            area = SeatFrontRight,
+            switchSeat FrontMiddle
+            {
+                anim = Climb_WindowB,
+                rate = 0.23,
+                sound = VehicleChangeSeat,
+            }
+            switchSeat FrontLeft
+            {
+                anim = Climb_WindowB,
+                rate = 0.46,
+                sound = VehicleChangeSeat,
+            }
+        }
+    }
+}

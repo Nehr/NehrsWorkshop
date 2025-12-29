@@ -1,0 +1,88 @@
+module Base
+{
+    vehicle PickUpTruck
+    {
+        template! = PickUpTruck,
+        specialKeyRing = Base.KeyRing_Bass;Base.KeyRing_EagleFlag;Base.KeyRing_EightBall;Base.KeyRing_Panther;Base.KeyRing_PineTree;Base.KeyRing_RabbitFoot;Base.KeyRing_Sexy,
+        specialLootChance = 40,
+        seats = 3,
+        model
+        {
+            file = Vehicles_PickUpTruck,
+            scale = 1.82,
+            offset = 0.0 0.3022 0.0,
+        }
+        skin
+        {
+            texture = Vehicles/vehicle_pickupshell,
+        }
+        template = PassengerSeat3_Trinity,
+        template = PickupTruckCollision,
+        template = Seat/part/SeatFrontMiddle,
+        passenger FrontLeft
+        {
+            position inside
+            {
+                offset = 0.25 -0.1374 0.0659,
+                rotate = 0.0 0.0 0.0,
+            }
+            position outside
+            {
+                offset = 0.61 -0.45 0.1813,
+                rotate = 0.0 0.0 0.0,
+                area = SeatFrontLeft,
+            }
+        }
+        passenger FrontMiddle
+        {
+            position inside
+            {
+                offset = 0.0 -0.1374 0.0659,
+                rotate = 0.0 0.0 0.0,
+            }
+        }
+        passenger FrontRight
+        {
+            position inside
+            {
+                offset = -0.25 -0.1374 0.0659,
+                rotate = 0.0 0.0 0.0,
+            }
+            position outside
+            {
+                offset = -0.61 -0.45 0.1813,
+                rotate = 0.0 0.0 0.0,
+                area = SeatFrontRight,
+            }
+        }
+        area SeatFrontLeft
+        {
+            xywh = 0.55 0.1813 0.36 0.4725,
+        }
+        area SeatFrontMiddle
+        {
+            xywh = 0.00 0.1813 0.36 0.4725,
+        }
+        area SeatFrontRight
+        {
+            xywh = -0.35 0.1813 0.36 0.4725,
+        }
+        extents = 0.8681 0.6593 2.1868,
+        physicsChassisShape = 0.8681 0.6593 2.1868,
+        centerOfMassOffset = 0.0 0.3022 0.0,
+        shadowExtents = 0.8681 2.1868,
+        shadowOffset = 0.0 0.0,
+        attachment trailer
+        {
+            offset = 0.0 -0.2747 -1.1813,
+            rotate = 0.0 0.0 0.0,
+            zoffset = -1.0,
+        }
+        attachment trailerfront
+        {
+            offset = 0.0 -0.2747 1.1374,
+            rotate = 0.0 0.0 0.0,
+            zoffset = 1.0,
+        }
+    }
+}

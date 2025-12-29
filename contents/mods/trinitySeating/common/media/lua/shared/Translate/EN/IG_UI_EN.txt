@@ -1,0 +1,3 @@
+IGUI_EN = {
+    IGUI_VehiclePartSeatFrontMiddle = "Front Middle Seat",
+}
