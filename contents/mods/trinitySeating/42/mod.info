@@ -1,5 +1,6 @@
-name=Three Seat Vehicles
-id=threeSeatVehicles
+name=Trinity Seating
+id=trinitySeating
 authors=Nehr
-description=Just doing stuff
+description=Adds a functional front middle seat to the vanilla pickup truck, allowing three passengers.
 category=vehicle
+poster=poster.png
