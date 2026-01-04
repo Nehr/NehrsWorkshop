@@ -18,7 +18,7 @@ module Base
         }
         template = PassengerSeat3_Trinity,
         template = PickupTruckCollision,
-        template = Seat/part/SeatFrontMiddle,
+        template = SeatFrontMiddle_Trinity,
         passenger FrontLeft
         {
             position inside
