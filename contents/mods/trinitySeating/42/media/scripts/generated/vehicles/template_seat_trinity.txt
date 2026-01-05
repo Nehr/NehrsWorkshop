@@ -1,9 +1,52 @@
 module Base
 {
     template vehicle SeatFrontMiddle_Trinity
-    {
-        part SeatFrontMiddle
         {
+            part SeatFrontMiddle
+            {
+                category = seat,
+            itemType = Base.NormalCarSeat,
+            mechanicRequireKey = true,
+            durability = 3,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:1,
+                recipes = Basic Mechanics,
+                test = Vehicles.InstallTest.Default,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:screwdriver,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:1,
+                recipes = Basic Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                requireEmpty = true,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
             mechanicArea = Interior,
             area = SeatFrontMiddle,
             container
@@ -11,56 +54,6 @@ module Base
                 seat = FrontMiddle,
                 test = Vehicles.ContainerAccess.Seat,
             }
-        }
-    }
-    part Seat*
-    {
-        category = seat,
-        itemType = Base.NormalCarSeat,
-        mechanicRequireKey = true,
-        durability = 3,
-        container
-        {
-            test = Vehicles.ContainerAccess.Seat,
-        }
-        table install
-        {
-            items
-            {
-                1
-                {
-                    tags = base:screwdriver,
-                    count = 1,
-                    keep = true,
-                    equip = primary,
-                }
-            }
-            time = 300,
-            skills = Mechanics:1,
-            recipes = Basic Mechanics,
-            test = Vehicles.InstallTest.Default,
-        }
-        table uninstall
-        {
-            items
-            {
-                1
-                {
-                    tags = base:screwdriver,
-                    count = 1,
-                    keep = true,
-                    equip = primary,
-                }
-            }
-            time = 300,
-            skills = Mechanics:1,
-            recipes = Basic Mechanics,
-            test = Vehicles.UninstallTest.Default,
-            requireEmpty = true,
-        }
-        lua
-        {
-            create = Vehicles.Create.Default,
         }
     }
 }

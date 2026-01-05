@@ -3,4 +3,4 @@ id=3634543881
 title=Trinity Seating – Pickup Truck Middle Seat [B42 MP]
 description=Trinity Seating adds a functional front middle seat to the vanilla pickup truck, allowing three passengers.
 tags=Build 42;Vehicles;QoL
-visibility=unlisted
+visibility=public
