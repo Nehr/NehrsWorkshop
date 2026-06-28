@@ -5,55 +5,56 @@ module Base
             part SeatFrontMiddle
             {
                 category = seat,
-            itemType = Base.NormalCarSeat,
-            mechanicRequireKey = true,
-            durability = 3,
-            table install
-            {
-                items
+                itemType = Base.NormalCarSeat2,
+                specificItem = false,
+                mechanicRequireKey = true,
+                durability = 3,
+                table install
                 {
-                    1
+                    items
                     {
-                        tags = base:screwdriver,
-                        count = 1,
-                        keep = true,
-                        equip = primary,
+                        1
+                        {
+                            tags = base:screwdriver,
+                            count = 1,
+                            keep = true,
+                            equip = primary,
+                        }
                     }
+                    time = 300,
+                    skills = Mechanics:1,
+                    recipes = Basic Mechanics,
+                    test = Vehicles.InstallTest.Default,
                 }
-                time = 300,
-                skills = Mechanics:1,
-                recipes = Basic Mechanics,
-                test = Vehicles.InstallTest.Default,
-            }
-            table uninstall
-            {
-                items
+                table uninstall
                 {
-                    1
+                    items
                     {
-                        tags = base:screwdriver,
-                        count = 1,
-                        keep = true,
-                        equip = primary,
+                        1
+                        {
+                            tags = base:screwdriver,
+                            count = 1,
+                            keep = true,
+                            equip = primary,
+                        }
                     }
+                    time = 300,
+                    skills = Mechanics:1,
+                    recipes = Basic Mechanics,
+                    test = Vehicles.UninstallTest.Default,
+                    requireEmpty = true,
                 }
-                time = 300,
-                skills = Mechanics:1,
-                recipes = Basic Mechanics,
-                test = Vehicles.UninstallTest.Default,
-                requireEmpty = true,
-            }
-            lua
-            {
-                create = Vehicles.Create.Default,
-            }
-            mechanicArea = Interior,
-            area = SeatFrontMiddle,
-            container
-            {
-                seat = FrontMiddle,
-                test = Vehicles.ContainerAccess.Seat,
-            }
+                lua
+                {
+                    create = Vehicles.Create.Default,
+                }
+                mechanicArea = Interior,
+                area = SeatFrontMiddle,
+                container
+                {
+                    seat = FrontMiddle,
+                    test = Vehicles.ContainerAccess.Seat,
+                }
         }
     }
 }

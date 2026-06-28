@@ -1,6 +1,10 @@
 name=Trinity Seating
 id=trinitySeating
-authors=Nehr
-description=Adds a functional front middle seat to the vanilla pickup truck, allowing three passengers.
+modversion=1.1
+author=Nehr
+description=Adds a functional front middle seat to vanilla pickup-style vehicles, allowing three passengers.
 category=vehicle
+url=https://steamcommunity.com/sharedfiles/filedetails/?id=3634543881
+versionMin=42.0.0
+versionMax=42.99.99
 poster=poster.png
